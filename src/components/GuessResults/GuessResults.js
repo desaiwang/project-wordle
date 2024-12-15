@@ -8,7 +8,9 @@ function GuessResults({ guesses }) {
   return (
     <>
       {range(NUM_OF_GUESSES_ALLOWED).map((i) => (
-        <Guess key={i} guess={i < guesses.length ? guesses[i].guess : null} />
+        <p className="guess">
+          <Guess key={i} guess={i < guesses.length ? guesses[i].guess : null} />
+        </p>
       ))}
     </>
   );

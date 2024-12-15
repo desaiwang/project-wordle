@@ -5,17 +5,13 @@ function Guess({ guess }) {
   //console.log("guess in Guess.js", guess);
   return (
     <>
-      {
-        <p className="guess">
-          {guess
-            ? range(5).map((j) => (
-                <span key={j} className="cell">
-                  {guess[j]}
-                </span>
-              ))
-            : range(5).map((j) => <span key={j} className="cell"></span>)}
-        </p>
-      }
+      {guess
+        ? range(5).map((j) => (
+            <span key={j} className="cell">
+              {guess[j]}
+            </span>
+          ))
+        : range(5).map((j) => <span key={j} className="cell"></span>)}
     </>
   );
 }
